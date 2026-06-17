@@ -1,0 +1,257 @@
+$date
+	Mon Jun 15 09:57:06 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_smart_energy_meter_fsm $end
+$var wire 1 ! warning $end
+$var wire 1 " tamper_alarm $end
+$var wire 3 # state_dbg [2:0] $end
+$var wire 1 $ relay_on $end
+$var wire 1 % measure_enable $end
+$var reg 1 & clk $end
+$var reg 1 ' low_credit $end
+$var reg 1 ( overload $end
+$var reg 1 ) pay_received $end
+$var reg 1 * rst $end
+$var reg 1 + sample_tick $end
+$var reg 1 , tamper_detected $end
+$scope module DUT $end
+$var wire 1 & clk $end
+$var wire 1 ' low_credit $end
+$var wire 1 ( overload $end
+$var wire 1 ) pay_received $end
+$var wire 1 * rst $end
+$var wire 1 + sample_tick $end
+$var wire 1 , tamper_detected $end
+$var reg 1 % measure_enable $end
+$var reg 3 - next_state [2:0] $end
+$var reg 1 $ relay_on $end
+$var reg 3 . state [2:0] $end
+$var reg 3 / state_dbg [2:0] $end
+$var reg 1 " tamper_alarm $end
+$var reg 4 0 timer [3:0] $end
+$var reg 1 ! warning $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx 0
+bx /
+bx .
+b0 -
+0,
+0+
+1*
+0)
+0(
+0'
+0&
+0%
+0$
+bx #
+0"
+0!
+$end
+#5000
+b0 #
+b0 /
+b0 .
+b0 0
+1&
+#10000
+0&
+#15000
+1&
+#20000
+0&
+0*
+#25000
+b1 0
+1&
+#30000
+0&
+#35000
+b1 -
+b10 0
+1&
+#40000
+0&
+#45000
+b1 #
+b1 /
+1$
+b1 .
+b0 0
+1&
+#50000
+0&
+#55000
+1&
+#60000
+1%
+1$
+0&
+1+
+#65000
+1&
+#70000
+0%
+1$
+0&
+0+
+#75000
+1&
+#80000
+b10 -
+0&
+1'
+#85000
+b10 #
+b10 /
+1!
+1$
+b10 .
+1&
+#90000
+0&
+0'
+#95000
+b1 0
+1&
+#100000
+0&
+#105000
+b10 0
+1&
+#110000
+0&
+#115000
+b11 -
+b11 0
+1&
+#120000
+0&
+#125000
+b11 #
+b11 /
+0!
+0$
+b11 .
+b0 0
+1&
+#130000
+0&
+#135000
+1&
+#140000
+b1 -
+0&
+1)
+#145000
+b1 #
+b1 /
+1$
+b1 .
+1&
+#150000
+0&
+0)
+#155000
+1&
+#160000
+0&
+#165000
+1&
+#170000
+b100 -
+0&
+1(
+#175000
+b100 #
+b100 /
+1!
+0$
+b100 .
+1&
+#180000
+b1 -
+0&
+1)
+0(
+#185000
+b1 #
+b1 /
+1$
+0!
+b1 .
+1&
+#190000
+0&
+0)
+#195000
+1&
+#200000
+0&
+#205000
+1&
+#210000
+b101 -
+0&
+1,
+#215000
+b101 #
+b101 /
+1"
+0$
+b101 .
+1&
+#220000
+b1 -
+0&
+1)
+0,
+#225000
+b1 #
+b1 /
+1$
+0"
+b1 .
+1&
+#230000
+0&
+0)
+#235000
+1&
+#240000
+0&
+#245000
+1&
+#250000
+b101 -
+0&
+1'
+1(
+1,
+#255000
+b101 #
+b101 /
+1"
+0$
+b101 .
+1&
+#260000
+0&
+#265000
+1&
+#270000
+0&
+#275000
+1&
+#280000
+0&
