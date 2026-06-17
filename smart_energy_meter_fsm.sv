@@ -25,9 +25,6 @@ module smart_energy_meter_fsm#(parameter INIT_TICKS= 2,parameter LOW_CREDIT_TIME
             state <= next_state;
     end
 
-    //-------------------------------------------------
-    // INIT Counter
-    //-------------------------------------------------
     always @(posedge clk)
     begin
         if(rst)
@@ -41,9 +38,6 @@ module smart_energy_meter_fsm#(parameter INIT_TICKS= 2,parameter LOW_CREDIT_TIME
             init_cnt <= 0;
     end
 
-    //-------------------------------------------------
-    // LOW CREDIT TIMER
-    //-------------------------------------------------
     always @(posedge clk)
     begin
         if(rst)
@@ -58,27 +52,18 @@ module smart_energy_meter_fsm#(parameter INIT_TICKS= 2,parameter LOW_CREDIT_TIME
             low_credit_cnt <= 0;
     end
 
-    //-------------------------------------------------
-    // Next State Logic
-    //-------------------------------------------------
     always @(*)
     begin
         next_state = state;
 
         case(state)
 
-            //-----------------------------------------
-            // INIT
-            //-----------------------------------------
             S_INIT:
             begin
                 if(init_cnt >= INIT_TICKS)
                     next_state = S_NORMAL;
             end
 
-            //-----------------------------------------
-            // NORMAL
-            //-----------------------------------------
             S_NORMAL:
             begin
                 if(tamper_detected)
@@ -91,9 +76,6 @@ module smart_energy_meter_fsm#(parameter INIT_TICKS= 2,parameter LOW_CREDIT_TIME
                     next_state = S_LOW_CREDIT;
             end
 
-            //-----------------------------------------
-            // LOW CREDIT
-            //-----------------------------------------
             S_LOW_CREDIT:
             begin
                 if(tamper_detected)
@@ -109,27 +91,18 @@ module smart_energy_meter_fsm#(parameter INIT_TICKS= 2,parameter LOW_CREDIT_TIME
                     next_state = S_DISCONNECTED;
             end
 
-            //-----------------------------------------
-            // DISCONNECTED
-            //-----------------------------------------
             S_DISCONNECTED:
             begin
                 if(pay_received)
                     next_state = S_NORMAL;
             end
 
-            //-----------------------------------------
-            // OVERLOAD
-            //-----------------------------------------
             S_OVERLOAD_TRIP:
             begin
                 if((!overload) && pay_received)
                     next_state = S_NORMAL;
             end
 
-            //-----------------------------------------
-            // TAMPER
-            //-----------------------------------------
             S_TAMPER:
             begin
                 if((!tamper_detected) && pay_received)
@@ -142,9 +115,6 @@ module smart_energy_meter_fsm#(parameter INIT_TICKS= 2,parameter LOW_CREDIT_TIME
         endcase
     end
 
-    //-------------------------------------------------
-    // Output Logic (Moore FSM)
-    //-------------------------------------------------
     always @(*)
     begin
         relay_on       = 0;
