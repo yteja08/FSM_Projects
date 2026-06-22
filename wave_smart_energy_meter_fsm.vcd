@@ -1,0 +1,365 @@
+$date
+	Mon Jun 22 09:33:17 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module smart_energy_meter_fsm_tb $end
+$var wire 1 ! warning $end
+$var wire 1 " tamper_alarm $end
+$var wire 3 # state_dbg [2:0] $end
+$var wire 1 $ relay_on $end
+$var wire 1 % measure_enable $end
+$var reg 1 & clk $end
+$var reg 1 ' low_credit $end
+$var reg 1 ( overload $end
+$var reg 1 ) pay_received $end
+$var reg 1 * rst $end
+$var reg 1 + sample_tick $end
+$var reg 1 , tamper_detected $end
+$scope module DUT $end
+$var wire 1 & clk $end
+$var wire 1 ' low_credit $end
+$var wire 1 ( overload $end
+$var wire 1 ) pay_received $end
+$var wire 1 * rst $end
+$var wire 1 + sample_tick $end
+$var wire 1 , tamper_detected $end
+$var parameter 32 - INIT_TICKS $end
+$var parameter 32 . LOW_CREDIT_TIMEOUT $end
+$var parameter 3 / S_DISCONNECTED $end
+$var parameter 3 0 S_INIT $end
+$var parameter 3 1 S_LOW_CREDIT $end
+$var parameter 3 2 S_NORMAL $end
+$var parameter 3 3 S_OVERLOAD_TRIP $end
+$var parameter 3 4 S_TAMPER $end
+$var reg 4 5 init_counter [3:0] $end
+$var reg 4 6 low_credit_counter [3:0] $end
+$var reg 1 % measure_enable $end
+$var reg 3 7 next_state [2:0] $end
+$var reg 1 $ relay_on $end
+$var reg 3 8 state [2:0] $end
+$var reg 3 9 state_dbg [2:0] $end
+$var reg 1 " tamper_alarm $end
+$var reg 1 ! warning $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 4
+b100 3
+b1 2
+b10 1
+b0 0
+b11 /
+b11 .
+b10 -
+$end
+#0
+$dumpvars
+bx 9
+bx 8
+b0 7
+bx 6
+bx 5
+0,
+0+
+1*
+0)
+0(
+0'
+0&
+0%
+0$
+bx #
+0"
+0!
+$end
+#5000
+b0 #
+b0 9
+b0 8
+b0 5
+b0 6
+1&
+#10000
+0&
+#15000
+1&
+#20000
+0&
+0*
+#25000
+b1 5
+1&
+#30000
+0&
+#35000
+b1 7
+b10 5
+1&
+#40000
+0&
+#45000
+b1 #
+b1 9
+1$
+b1 8
+1&
+#50000
+0&
+#55000
+b0 5
+1&
+#60000
+1%
+1$
+0&
+1+
+#65000
+1&
+#70000
+0%
+1$
+0&
+0+
+#75000
+1&
+#80000
+0&
+#85000
+1&
+#90000
+b10 7
+0&
+1'
+#95000
+b10 #
+b10 9
+1!
+1$
+b10 8
+1&
+#100000
+0&
+#105000
+b1 6
+1&
+#110000
+0&
+#115000
+b10 6
+1&
+#120000
+0&
+#125000
+b11 7
+b11 6
+1&
+#130000
+0&
+#135000
+b11 #
+b11 9
+0!
+0$
+b11 8
+1&
+#140000
+b1 7
+0&
+1)
+#145000
+b1 #
+b1 9
+1$
+b10 7
+b1 8
+b0 6
+1&
+#150000
+b1 7
+0&
+0'
+0)
+#155000
+1&
+#160000
+0&
+#165000
+1&
+#170000
+0&
+#175000
+1&
+#180000
+b10 7
+0&
+1'
+#185000
+b10 #
+b10 9
+1!
+1$
+b10 8
+1&
+#190000
+0&
+#195000
+b1 6
+1&
+#200000
+0&
+#205000
+b10 6
+1&
+#210000
+0&
+#215000
+b11 7
+b11 6
+1&
+#220000
+0&
+#225000
+b11 #
+b11 9
+0!
+0$
+b11 8
+1&
+#230000
+0&
+#235000
+b0 6
+1&
+#240000
+0&
+#245000
+1&
+#250000
+0&
+#255000
+1&
+#260000
+b1 7
+0&
+1)
+0'
+#265000
+b1 #
+b1 9
+1$
+b1 8
+1&
+#270000
+0&
+0)
+#275000
+1&
+#280000
+0&
+#285000
+1&
+#290000
+0&
+#295000
+1&
+#300000
+b100 7
+0&
+1(
+#305000
+b100 #
+b100 9
+1!
+0$
+b100 8
+1&
+#310000
+0&
+#315000
+1&
+#320000
+0&
+#325000
+1&
+#330000
+b1 7
+0&
+1)
+0(
+#335000
+b1 #
+b1 9
+1$
+0!
+b1 8
+1&
+#340000
+0&
+0)
+#345000
+1&
+#350000
+0&
+#355000
+1&
+#360000
+0&
+#365000
+1&
+#370000
+b101 7
+0&
+1,
+#375000
+b101 #
+b101 9
+1"
+0$
+b101 8
+1&
+#380000
+0&
+#385000
+1&
+#390000
+0&
+#395000
+1&
+#400000
+b1 7
+0&
+1)
+0,
+#405000
+b1 #
+b1 9
+1$
+0"
+b1 8
+1&
+#410000
+0&
+0)
+#415000
+1&
+#420000
+0&
+#425000
+1&
+#430000
+0&
+#435000
+1&
+#440000
+0&
+#445000
+1&
+#450000
+0&
