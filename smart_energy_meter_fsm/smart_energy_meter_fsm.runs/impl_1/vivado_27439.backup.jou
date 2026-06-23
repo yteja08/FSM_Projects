@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Tue Jun 23 11:07:05 2026
+# Process ID         : 27439
+# Current directory  : /home/teja/Desktop/Verilog_Practice/FSM_Projects/smart_energy_meter_fsm/smart_energy_meter_fsm/smart_energy_meter_fsm.runs/impl_1
+# Command line       : vivado -log smart_energy_meter_fsm.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source smart_energy_meter_fsm.tcl -notrace
+# Log file           : /home/teja/Desktop/Verilog_Practice/FSM_Projects/smart_energy_meter_fsm/smart_energy_meter_fsm/smart_energy_meter_fsm.runs/impl_1/smart_energy_meter_fsm.vdi
+# Journal file       : /home/teja/Desktop/Verilog_Practice/FSM_Projects/smart_energy_meter_fsm/smart_energy_meter_fsm/smart_energy_meter_fsm.runs/impl_1/vivado.jou
+# Running On         : teja-Acer-One-Z14-55N
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04 LTS
+# Processor Detail   : Intel(R) Core(TM) i3-N305
+# CPU Frequency      : 1449.878 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 8
+# Host memory        : 7509 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 11804 MB
+# Available Virtual  : 5177 MB
+#-----------------------------------------------------------
+source smart_energy_meter_fsm.tcl -notrace
